@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main(void) {
+  int x = 0, y = 0;
+  for (int i = 9; i <= 90; i++) {
+    if (i % 3 == 0 && i % 5 != 0) {
+      y++;
+      x = x + i;
+      printf("\n%iº múltiplo de 3 e não múltiplo de 5: %i\n", y, i);
+    }
+  }
+  printf("\nA soma dos números é de: %i\n", x);
+  return 0;
+}
