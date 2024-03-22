@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main(void) {
+  float x, pp, pn, count = 0, countp = 0, countn = 0;
+  do{
+    printf("Digite um número, positivo ou negativo: ");
+    scanf("%f", &x);
+    if(x > 0){
+      countp++;
+      count++;
+    }
+    if(x < 0){
+      countn++;
+      count++;
+    }
+  } while (x!=0);
+  pp = (countp / count) * 100;
+  pn = (countn / count) * 100;
+  printf("A porcentagem de números positivos é de %.2f%%\n", pp);
+  printf("A porcentagem de números negativos é de %.2f%%\n", pn);
+  return 0;
+}
