@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main(void) {
+  int x = 0, y = 0;
+  for (int i = 400; i >= 300; i--) {
+    if (i % 11 == 0) {
+      y++;
+      x = x + i;
+      printf("\n%iº múltiplo de 11: %i\n", y, i);
+    }
+  }
+  printf("\nA soma dos múltiplos é de: %i\n", x);
+  return 0;
+}
