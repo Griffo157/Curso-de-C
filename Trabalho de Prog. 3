@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main(void) {
+  int x = 0, y;
+  float media;
+  printf("De onde quer iniciar a contagem?: ");
+  scanf("%i", &y);
+  while (x < 100){
+    if(y % 2 != 0 && y % 7 == 0){
+      x++;
+      printf("%iº número: %i\n", x, y);
+      media = media + y;
+    }
+    y++;
+  } media = media / x;
+  printf("A média dos números é: %.2f", media);
+  return 0;
+}
