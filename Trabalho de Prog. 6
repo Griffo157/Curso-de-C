@@ -4,7 +4,7 @@ int main(void) {
   int count = 0;
   float temp, media = 0;
   do{
-    printf("Digite o valor da temperatura no %iº dia: ", count+1);
+    printf("Digite o valor da temperatura [-15ºC 5ºC] no %iº dia: ", count+1);
     scanf("%f", &temp);
     if(temp >= -15 && temp <= 5){
       count++;
