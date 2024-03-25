@@ -1,0 +1,33 @@
+#include <stdio.h>
+#define TAMANHO 10
+int main(void) {
+  float bimestre1[TAMANHO], media = 0, am = 0, abm = 0, pam, pabm;
+  int indice = 0;
+  printf("Dados da turma - 1º bimestre\n");
+  while (indice < TAMANHO) {
+    printf("Nota do %iº aluno [0 - 10]: ", indice + 1);
+    scanf("%f", &bimestre1[indice]);
+    if (bimestre1[indice] < 0 || bimestre1[indice] > 10) {
+      printf("\nA nota não pode ser negativa ou maior que 10!!\n\n");
+    } else {
+      indice++;
+    }
+  }
+  for (indice = 0; indice < TAMANHO; indice++) {
+    media = media + bimestre1[indice];
+  }
+  media = media / TAMANHO;
+  printf("\nMédia da turma: %.1f\n", media);
+  for (indice = 0; indice < TAMANHO; indice++) {
+    if (bimestre1[indice] >= media) {
+      am++;
+    } else {
+      abm++;
+    }
+  } 
+  pam = am * 100 / TAMANHO;
+  pabm = abm * 100 / TAMANHO;
+  printf("\n%.0f alunos com nota acima da média: %.1f%%\n", am,  pam);
+  printf("\n%.0f alunos com nota abaixo da média: %.1f%%\n", abm, pabm);
+  return 0;
+}
